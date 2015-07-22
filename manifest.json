@@ -3,18 +3,18 @@
   "name": "Execute my Script",
   "description": "This Extension will execute your saved JavaScripts",
   "icons": {
-      "16": "icons/16x16.png",
       "19": "icons/19x19.png",
       "48": "icons/48x48.png",
       "128": "icons/128x128.png"
     },
-  "version": "0.5",
+  "version": "0.8",
   "browser_action": {
     "default_icon": "icons/19x19.png",
     "default_popup": "popup.html"
   },
   "permissions": [
     "activeTab",
+    "storage",
     "http://*/*",
     "https://*/*"
   ]
