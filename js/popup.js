@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  chrome.tabs.executeScript(null, {file: "jquery.min.js"});
+  chrome.tabs.executeScript(null, {file: "js/jquery.min.js"});
 
   chrome.storage.sync.get(null, function(data) {
     for(var script_key in data) {

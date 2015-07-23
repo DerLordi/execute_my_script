@@ -8,8 +8,8 @@ function deSnakeCasify(val) {
 
 function createButton(name, label) {
   var div_container = $('<div></div>').addClass(snakeCasify(name));
-  var deleteButton = $('<a href="#" class="editable loeschen"><img src="images/bin.png"/></a>').attr("rel", name);
-  var editButton = $('<a href="edit.html?key='+snakeCasify(name.trim())+'" class="editable edit"><img src="images/pen.png"/></a>').attr("rel", name);
+  var deleteButton = $('<a href="#" class="editable loeschen"><img src="../images/bin.png"/></a>').attr("rel", name);
+  var editButton = $('<a href="edit.html?key='+snakeCasify(name.trim())+'" class="editable edit"><img src="../images/pen.png"/></a>').attr("rel", name);
   var label = $('<div></div>').addClass('label label-item-'+label);
   var button = $('<button></button>')
     .attr("id", snakeCasify(name))
