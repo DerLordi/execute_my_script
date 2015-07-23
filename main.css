@@ -50,13 +50,13 @@ h1 span {
   cursor: pointer;
 }
 
-.script_buttons:hover, #save_button:hover {
-  background-color: #52b159;
+.script_buttons:hover, #save_button:hover, #update_button:hover {
+  background-color: #7ef49d;
   transform: scale(1.1);
 }
 
 .script_buttons_red {
-  background-color: #7ef49d;
+  background-color: #52b159;
 }
 
 label {
@@ -78,12 +78,13 @@ textarea {
 #save_button, #update_button {
   width: 320px;
   border: none;
-  background-color: green;
+  background-color: #52b159;
   padding: 8px;
   margin-top: 15px;
   color: white;
   font-size: 1.3em;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 
@@ -96,7 +97,7 @@ textarea {
   cursor: pointer;
 }
 
-.edit, .loeschen {
+.edit:hover, .loeschen:hover, .label-active {
   animation: shake .5s ease-in-out infinite;
 }
 
@@ -126,7 +127,7 @@ textarea {
   }
 }
 
-.edit:hover, .loeschen:hover {
+.edit, .loeschen {
   animation: none;
 }
 
@@ -164,3 +165,50 @@ textarea {
   text-decoration: none;
   font-weight: bold;
 }
+
+.label {
+  width: 12px;
+  height: 12px;
+  margin-left: 10px;
+  background-color: #bbb;
+  float: right;
+  border-radius: 9px;
+  border: 2px solid #fff;
+  margin-top: 1px;
+}
+
+.fields .label-red,
+#button_container .label-item-red,
+.fields .label-item-red {
+  background-color: #C10F10;
+}
+
+.fields .label-blue,
+#button_container .label-item-blue,
+.fields .label-item-blue {
+  background-color: #2E2EC1;
+}
+
+.fields .label-green,
+#button_container .label-item-green,
+.fields .label-item-green {
+  background-color: #2DC114;
+}
+
+.fields .label-yellow,
+#button_container .label-item-yellow,
+.fields .label-item-yellow {
+  background-color: #DFCA13;
+}
+
+.label-item {
+  list-style-type: none;
+  background-color: #ccc;
+  width: 15px;
+  height: 15px;
+  float: left;
+  margin-left: 36px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+

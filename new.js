@@ -1,4 +1,8 @@
 $(document).ready(function() {
+  $('.label-item').on('click', function() {
+    activateLabel($(this));
+  });
+
   $('#save_button').click(function() {
     if(validate_name.validate($('#field_name').val()) === false) {
       $('#field_script').next('p').text("");
@@ -8,7 +12,7 @@ $(document).ready(function() {
         $('#field_name').next('p').text("");
         $('#field_script').next('p').text(validate_script.message);
       } else {
-        saveEntry($('#field_name').val(), $('#field_script').val());
+        saveEntry($('#field_name').val(), $('#field_script').val(), $('.label-active').attr("rel"));
       }
     }
   });

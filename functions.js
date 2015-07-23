@@ -6,10 +6,11 @@ function deSnakeCasify(val) {
   return val.replace(/_/g," ");
 }
 
-function createButton(name) {
+function createButton(name, label) {
   var div_container = $('<div></div>').addClass(snakeCasify(name));
   var deleteButton = $('<a href="#" class="editable loeschen"><img src="images/bin.png"/></a>').attr("rel", name);
   var editButton = $('<a href="edit.html?key='+snakeCasify(name.trim())+'" class="editable edit"><img src="images/pen.png"/></a>').attr("rel", name);
+  var label = $('<div></div>').addClass('label label-item-'+label);
   var button = $('<button></button>')
     .attr("id", snakeCasify(name))
     .addClass('script_buttons script_buttons_red')
@@ -17,6 +18,7 @@ function createButton(name) {
 
   div_container.appendTo($('#button_container'));
   button.appendTo(div_container);
+  label.appendTo(button);
   deleteButton.appendTo(div_container);
   editButton.appendTo(div_container);
 }
@@ -49,16 +51,27 @@ var validate_script = {
     message: "ERROR: Has to be filled"
 }
 
-function saveEntry(script_name, script_value) {
+function saveEntry(script_name, script_value, script_label) {
   var storage = chrome.storage.local
   var obj = {};
 
   if (!script_name || !script_value) {
-    alert("es ist ein fehler aufgetreten, beide Felder müssen gefüllt sein!");
+      alert("es ist ein fehler aufgetreten, beide Felder müssen gefüllt sein!");
     return;
   }
-  obj[script_name] = script_value;
+  obj[script_name] = {script: script_value, label: script_label };
   chrome.storage.sync.set(obj, function() {
     window.location.href = "popup.html";
+  });
+}
+
+function activateLabel(label) {
+
+  $('.label-item').each(function() {
+    if($(this).attr("class") == label.attr("class")) {
+      $(this).addClass('label-active');
+    } else {
+      $(this).removeClass('label-active');
+    }
   });
 }

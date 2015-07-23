@@ -3,7 +3,8 @@ $(document).ready(function() {
 
   chrome.storage.sync.get(null, function(data) {
     for(var script_key in data) {
-        createButton(script_key)
+      var obj = data[script_key];
+      createButton(script_key, obj.label);
     }
 
     $('.editable').hide();
@@ -11,7 +12,7 @@ $(document).ready(function() {
     $('#button_container button').on('click', function() {
       var key = $(this).attr("id").replace(/_/g," ");
       chrome.storage.sync.get(key, function(data) {
-        chrome.tabs.executeScript({ code: data[key] });
+        chrome.tabs.executeScript({ code: data[key].script });
       });
     });
 
