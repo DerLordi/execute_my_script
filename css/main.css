@@ -127,7 +127,7 @@ textarea {
   }
 }
 
-.edit, .loeschen {
+.edit, .loeschen, .label-item-clear {
   animation: none;
 }
 
@@ -166,6 +166,11 @@ textarea {
   font-weight: bold;
 }
 
+.margin-bottom {
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
 .label {
   width: 12px;
   height: 12px;
@@ -177,35 +182,34 @@ textarea {
   margin-top: 1px;
 }
 
-.fields .label-red,
+.label-red,
 #button_container .label-item-red,
-.fields .label-item-red {
+.label-item-red {
   background-color: #C10F10;
 }
 
-.fields .label-blue,
+.label-blue,
 #button_container .label-item-blue,
-.fields .label-item-blue {
+.label-item-blue {
   background-color: #2E2EC1;
 }
 
-.fields .label-green,
+.label-green,
 #button_container .label-item-green,
-.fields .label-item-green {
+.label-item-green {
   background-color: #2DC114;
 }
 
-.fields .label-yellow,
+.label-yellow,
 #button_container .label-item-yellow,
-.fields .label-item-yellow {
+.label-item-yellow {
   background-color: #DFCA13;
 }
 
 .label-item {
   list-style-type: none;
-  background-color: #ccc;
-  width: 15px;
-  height: 15px;
+  width: 16px;
+  height: 16px;
   float: left;
   margin-left: 36px;
   border-radius: 8px;

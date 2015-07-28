@@ -7,7 +7,7 @@ function deSnakeCasify(val) {
 }
 
 function createButton(name, label) {
-  var div_container = $('<div></div>').addClass(snakeCasify(name));
+  var div_container = $('<div></div>').addClass(snakeCasify(name)).attr("rel", label);
   var deleteButton = $('<a href="#" class="editable loeschen"><img src="../images/bin.png"/></a>').attr("rel", name);
   var editButton = $('<a href="edit.html?key='+snakeCasify(name.trim())+'" class="editable edit"><img src="../images/pen.png"/></a>').attr("rel", name);
   var label = $('<div></div>').addClass('label label-item-'+label);
@@ -65,8 +65,22 @@ function saveEntry(script_name, script_value, script_label) {
   });
 }
 
-function activateLabel(label) {
+function show_all_buttons() {
+  $('#button_container > div').each(function() {
+    $(this).show();
+  });
+}
 
+function filter_buttons(label) {
+  $('#button_container > div').each(function() {
+    ($(this).attr("rel") == label) ? $(this).show() : $(this).hide();
+    if(label == "clear") {
+      show_all_buttons();
+    }
+  });
+}
+
+function activateLabel(label) {
   $('.label-item').each(function() {
     if($(this).attr("class") == label.attr("class")) {
       $(this).addClass('label-active');

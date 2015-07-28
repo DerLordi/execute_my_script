@@ -23,6 +23,11 @@ $(document).ready(function() {
     });
   });
 
+  $('.label-list .label-item').on('click', function() {
+    activateLabel($(this));
+    filter_buttons($(this).attr("rel"));
+  });
+
   $('#edit_script').on('click', function() {
     if ($(this).attr("rel") == "false") {
       $('.editable').show();
