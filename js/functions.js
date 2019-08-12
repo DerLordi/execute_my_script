@@ -66,9 +66,7 @@ function saveEntry(script_name, script_value, script_label) {
 }
 
 function show_all_buttons() {
-  $('#button_container > div').each(function() {
-    $(this).show();
-  });
+  $('#button_container > div').show();
 }
 
 function filter_buttons(label) {

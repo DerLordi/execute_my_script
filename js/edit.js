@@ -6,7 +6,6 @@ $(document).ready(function() {
     $('.label-item-'+result[script_name].label).addClass('label-active');
   });
 
-
   $('.label-item').on('click', function() {
     activateLabel($(this));
   });

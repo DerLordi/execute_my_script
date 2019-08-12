@@ -19,7 +19,7 @@ $(document).ready(function() {
     $('#button_container .loeschen').on('click', function() {
       var key = $(this).attr("rel");
       chrome.storage.sync.remove(key);
-      $('.'+snakeCasify(key)).hide('fast');
+      $('.'+snakeCasify(key)).remove();
     });
   });
 
