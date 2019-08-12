@@ -6,7 +6,7 @@ You can write them and save them to a button. Now you dont have to open you cons
 
 This was a huge timesaver on my part. 
 
-### install
+### Install
 This Extension is not yet available on the chrome store. You have to download the files and 
 
 1. Open the Extension Management page by navigating to chrome://extensions.
