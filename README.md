@@ -1,10 +1,10 @@
 # execute_my_script
 EXECUTE MY SCRIPT - This Extension will execute your saved JavaScripts. Use your imagination
 
-This Extension will help with reoccurring script that you have to execute in your browser console. 
-You can write them and save them to a button. Now you dont have to open you console every time to execute some Javascript.
+This Extension will help with reoccurring scripts that you have to execute in your browser console. 
+You can write them and save them to a button. Now your dont have to open you console every time to execute some Javascript.
 
-This was a huge timesaver on my part. 
+This was a huge timesaver for me. 
 
 ### Install
 This Extension is not yet available on the chrome store. You have to download the files and 
